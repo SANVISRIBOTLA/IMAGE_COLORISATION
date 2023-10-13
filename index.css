@@ -1,0 +1,130 @@
+/* Add this to your CSS file (css/index.css) */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 60%;
+    min-height: 50%;
+    z-index: -1;
+}
+
+.background-video video {
+    object-fit: cover;
+}
+
+.content {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}/*
+* 	BIG Jelly Button
+*		Original source from Mathias Adam:
+*				- https://dribbble.com/shots/6209185-BIG-Jelly-Button
+*
+*		I tried to stay as true to the original source as possible.
+*		Unforutunately there were a few effects I couldn't make 
+*		happen with CSS. Primarily the suble noise texture. I 
+*		considered using a base64 encoded noise pattern overlay but
+*		I felt like that was cheating. I also couldn't do the
+*		true bevel effect on the label since CSS doesn't have an
+*		inset text shadow option. 
+*/
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	
+	background-image: linear-gradient(135deg, #0042D9 0%, #0093FF 60%, #0078FF 100%);
+}
+
+button {
+	text-align: center;
+	top:40px;
+	left:380px;
+	cursor: pointer;
+	position: relative;
+	padding: 2.5rem 7.5rem;
+	border-radius: 3.75rem;
+	line-height: 1.5rem;
+	font-size: 2rem;
+	font-weight: 600;
+	
+	border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+button span {
+	color: transparent;
+	background-image: linear-gradient(0deg, #EE82DA 0%, #FEFAFD 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+button::before {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	opacity: 0.7;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+button::after {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	bottom: 0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}

@@ -1,0 +1,113 @@
+/* Additional CSS rules */
+body {
+    background-image: url('bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* Add any other styling you need for the body */
+}
+
+form {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with some transparency */
+    margin: 100px auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Styles for the image upload form */
+.image-upload-form {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-upload-form label.custom-file-upload {
+    border: 2px dashed #787878;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.image-upload-form label.custom-file-upload:hover {
+    background-color: #f0f0f0;
+}
+
+.image-upload-form label.custom-file-upload i {
+    margin-right: 10px;
+}
+
+.image-upload-form input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.submit {
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #787878; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: #2980b9; /* Button background color on hover */
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the width as needed */
+}
+
+.image-frame {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with some transparency */
+    max-width: 45%; /* Adjust the width as needed */
+    border-radius: 10px;
+}
+
+.image-frame h2 {
+    margin: 0;
+}
+
+.image-frame img {
+    max-width: 100%;
+    height: auto;
+}
+
+.colored {
+    display: block;
+}
+
+.uploaded-image {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with some transparency */
+    max-width: 45%; /* Adjust the width as needed */
+    border-radius: 10px;
+}
+
+.uploaded-image img {
+    max-width: 100%;
+    height: auto;
+}

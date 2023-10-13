@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flask Page with Video Background</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body>
+<div class="background-video">
+    <video autoplay muted loop>
+        <source src="{{ url_for('static', filename='css/mv.mp4') }}" type="video/mp4">
+
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="content flex flex-column justify-content-center">
+    <!--h1>Welcome to the Flask Page with Video Background</h1-->
+
+    
+    <div class="container text-center">
+       
+        <form action="/page1" method="get">
+            <button>
+                <span href="colorisation.html" >
+           Colorise
+                </span>
+            </button>
+
+        </form>
+
+      </div>
+
+      
+          
+      
+      
+    <form action="/page2" method="get">
+        <button>
+            <span href="bw.html">
+       Decolorise
+            </span>
+        </button>
+    </form>
+</div>
+</body>
+</html>

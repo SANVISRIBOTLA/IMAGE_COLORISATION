@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link href="{{ url_for('static', filename='css/bw.css') }}" rel="stylesheet">
+
+</head>
+<body>
+    
+    <form action="/process_image" method="POST" enctype="multipart/form-data" class="image-upload-form">
+        <label for="image-upload" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i> Choose an Image
+        </label>
+        <input type="file" id="image-upload" name="image" accept="image/*" required>
+        <button class="submit">Decolorize</button>
+    </form>
+        <!-- Display both the input and colorized images side by side -->
+        <div class="image-container">
+            <!-- Input Image -->
+            <div class="image-frame">
+                {% if input_image %}
+                    <h2>Color Image</h2>
+                    <img src="data:image/jpeg;base64,{{ input_image }}" alt="Input Image">
+                {% endif %}
+            </div>
+    
+    <div id="output-frame" class="colored">
+    {% if base64_image %}
+        <h2> GrayScale Image</h2>
+        <img src="data:image/jpeg;base64,{{ base64_image }}" alt="Processed Image">
+        <a href="{{ url_for('download_colorized_image') }}" download="temp_colorized_image.jpeg">Download Colorized Image</a>
+     {% endif %}
+    </div>
+</div>
+</body>
+</html>
